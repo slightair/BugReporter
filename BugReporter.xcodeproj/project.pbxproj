@@ -13,6 +13,8 @@
 		7FB51DC31C8802C0006BA0FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB51DC21C8802C0006BA0FC /* Assets.xcassets */; };
 		7FB51DC61C8802C0006BA0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB51DC41C8802C0006BA0FC /* LaunchScreen.storyboard */; };
 		7FB51DD11C8802C0006BA0FC /* BugReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB51DD01C8802C0006BA0FC /* BugReporterTests.swift */; };
+		7FB51DDD1C880E95006BA0FC /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB51DDB1C880E95006BA0FC /* ReSwift.framework */; };
+		7FB51DDE1C880E95006BA0FC /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB51DDC1C880E95006BA0FC /* Chameleon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		7FB51DCC1C8802C0006BA0FC /* BugReporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugReporterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB51DD01C8802C0006BA0FC /* BugReporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugReporterTests.swift; sourceTree = "<group>"; };
 		7FB51DD21C8802C0006BA0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB51DDB1C880E95006BA0FC /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		7FB51DDC1C880E95006BA0FC /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB51DDD1C880E95006BA0FC /* ReSwift.framework in Frameworks */,
+				7FB51DDE1C880E95006BA0FC /* Chameleon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		7FB51DAF1C8802C0006BA0FC = {
 			isa = PBXGroup;
 			children = (
+				7FB51DDB1C880E95006BA0FC /* ReSwift.framework */,
+				7FB51DDC1C880E95006BA0FC /* Chameleon.framework */,
 				7FB51DBA1C8802C0006BA0FC /* BugReporter */,
 				7FB51DCF1C8802C0006BA0FC /* BugReporterTests */,
 				7FB51DB91C8802C0006BA0FC /* Products */,
@@ -106,6 +114,7 @@
 				7FB51DB41C8802C0006BA0FC /* Sources */,
 				7FB51DB51C8802C0006BA0FC /* Frameworks */,
 				7FB51DB61C8802C0006BA0FC /* Resources */,
+				7FB51DDF1C880EBE006BA0FC /* carthage copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +200,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7FB51DDF1C880EBE006BA0FC /* carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
+			);
+			name = "carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7FB51DB41C8802C0006BA0FC /* Sources */ = {
@@ -327,6 +355,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BugReporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.clv.ios.BugReporter;
@@ -338,6 +370,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BugReporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.clv.ios.BugReporter;
@@ -388,6 +424,7 @@
 				7FB51DD71C8802C0006BA0FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FB51DD81C8802C0006BA0FC /* Build configuration list for PBXNativeTarget "BugReporterTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +433,7 @@
 				7FB51DDA1C8802C0006BA0FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
