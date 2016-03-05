@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F7870201C895774009E7CF1 /* ReportTargetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78701F1C895774009E7CF1 /* ReportTargetReducer.swift */; };
+		7F7870221C897E4A009E7CF1 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7870211C897E4A009E7CF1 /* AppReducer.swift */; };
 		7FB51DBC1C8802C0006BA0FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB51DBB1C8802C0006BA0FC /* AppDelegate.swift */; };
 		7FB51DBE1C8802C0006BA0FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB51DBD1C8802C0006BA0FC /* ViewController.swift */; };
 		7FB51DC11C8802C0006BA0FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB51DBF1C8802C0006BA0FC /* Main.storyboard */; };
@@ -15,7 +17,11 @@
 		7FB51DD11C8802C0006BA0FC /* BugReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB51DD01C8802C0006BA0FC /* BugReporterTests.swift */; };
 		7FB51DDD1C880E95006BA0FC /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB51DDB1C880E95006BA0FC /* ReSwift.framework */; };
 		7FB51DDE1C880E95006BA0FC /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB51DDC1C880E95006BA0FC /* Chameleon.framework */; };
+		7FB59C5D1C881B8C00130156 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59C5C1C881B8C00130156 /* AppState.swift */; };
+		7FB59C5F1C8929F600130156 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59C5E1C8929F600130156 /* App.swift */; };
+		7FB59C611C8936EC00130156 /* ReportTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59C601C8936EC00130156 /* ReportTarget.swift */; };
 		7FB59C631C89526300130156 /* ReSwiftRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB59C621C89526300130156 /* ReSwiftRouter.framework */; };
+		7FB59C661C89556600130156 /* BugCountUpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59C651C89556600130156 /* BugCountUpAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F78701F1C895774009E7CF1 /* ReportTargetReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTargetReducer.swift; sourceTree = "<group>"; };
+		7F7870211C897E4A009E7CF1 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		7FB51DB81C8802C0006BA0FC /* BugReporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugReporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB51DBB1C8802C0006BA0FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB51DBD1C8802C0006BA0FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +49,11 @@
 		7FB51DD21C8802C0006BA0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB51DDB1C880E95006BA0FC /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		7FB51DDC1C880E95006BA0FC /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
+		7FB59C5C1C881B8C00130156 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7FB59C5E1C8929F600130156 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		7FB59C601C8936EC00130156 /* ReportTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTarget.swift; sourceTree = "<group>"; };
 		7FB59C621C89526300130156 /* ReSwiftRouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwiftRouter.framework; path = Carthage/Build/iOS/ReSwiftRouter.framework; sourceTree = "<group>"; };
+		7FB59C651C89556600130156 /* BugCountUpAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugCountUpAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,10 @@
 		7FB51DBA1C8802C0006BA0FC /* BugReporter */ = {
 			isa = PBXGroup;
 			children = (
+				7FB59C671C89569600130156 /* Reducers */,
+				7FB59C641C8954D300130156 /* Actions */,
+				7FB59C5B1C881B3300130156 /* State */,
+				7FB59C5E1C8929F600130156 /* App.swift */,
 				7FB51DBB1C8802C0006BA0FC /* AppDelegate.swift */,
 				7FB51DBD1C8802C0006BA0FC /* ViewController.swift */,
 				7FB51DBF1C8802C0006BA0FC /* Main.storyboard */,
@@ -106,6 +122,32 @@
 				7FB51DD21C8802C0006BA0FC /* Info.plist */,
 			);
 			path = BugReporterTests;
+			sourceTree = "<group>";
+		};
+		7FB59C5B1C881B3300130156 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				7FB59C5C1C881B8C00130156 /* AppState.swift */,
+				7FB59C601C8936EC00130156 /* ReportTarget.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		7FB59C641C8954D300130156 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				7FB59C651C89556600130156 /* BugCountUpAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		7FB59C671C89569600130156 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				7F7870211C897E4A009E7CF1 /* AppReducer.swift */,
+				7F78701F1C895774009E7CF1 /* ReportTargetReducer.swift */,
+			);
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB59C5D1C881B8C00130156 /* AppState.swift in Sources */,
+				7FB59C611C8936EC00130156 /* ReportTarget.swift in Sources */,
+				7FB59C5F1C8929F600130156 /* App.swift in Sources */,
+				7FB59C661C89556600130156 /* BugCountUpAction.swift in Sources */,
 				7FB51DBE1C8802C0006BA0FC /* ViewController.swift in Sources */,
 				7FB51DBC1C8802C0006BA0FC /* AppDelegate.swift in Sources */,
+				7F7870221C897E4A009E7CF1 /* AppReducer.swift in Sources */,
+				7F7870201C895774009E7CF1 /* ReportTargetReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

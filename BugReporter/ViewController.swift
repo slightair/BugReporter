@@ -1,13 +1,20 @@
 import UIKit
+import ReSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StoreSubscriber {
+    @IBOutlet weak var countLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        App.mainStore.subscribe(self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func newState(state: AppState) {
+        countLabel.text = "Count: \(state.reportTarget.bugCount)"
+    }
+
+    @IBAction func didTapCountUpButton(sender: UIButton) {
+        App.mainStore.dispatch(BugCountUpAction())
     }
 }
